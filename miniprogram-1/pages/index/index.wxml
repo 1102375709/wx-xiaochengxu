@@ -1,0 +1,79 @@
+<!--index.wxml-->
+<!-- 搜索栏 -->
+<view class="top">
+  <view class="ui-searchbar">
+    <view class="ui-searchbar_form">
+      <view class="ui-searchbar_box">
+        <icon class="ui-icon-search_inbox" type="search" size="14"></icon>
+        <input type="text" class="ui-searchbar_input" placeholder="请输入要查找的商品"/>
+      </view>
+    </view>
+    <view class="ui-searchbar_cancelbtn" bindtap='search'>搜索</view>
+  </view>
+  <!-- tab导航栏 -->
+  <scroll-view scroll-x="true" class="nav" scroll-left="{{navScrollLeft}}" scroll-with-animation="{{true}}">
+    <block wx:for="{{navData}}" wx:for-index="idx" wx:for-item="navItem" wx:key="idx">
+      <view class="nav-item {{currentTab == idx ?'active':''}}" data-current="{{idx}}" bindtap="switchNav">
+        <text>{{navItem}}</text>
+      </view>
+    </block>
+  </scroll-view>
+</view>
+<!-- 页面内容 -->
+<view class="ui-tabcontent">
+	<!-- 第1个页面 -->
+	<view hidden="{{currentTab != 0}}">
+    <!-- 图片滚动播放 -->
+		<view class="images-container">
+      <swiper indicator-dots="{{indicatordots}}" autoplay="{{autoplay}}" interval="{{interval}}"> 
+        <swiper-item><image class="images" src="/pages/lunbo-images/01.jpg"></image></swiper-item>
+        <swiper-item><image class="images" src="/pages/lunbo-images/02.jpg"></image></swiper-item>
+        <swiper-item><image class="images" src="/pages/lunbo-images/03.jpg"></image></swiper-item>
+      </swiper>
+    </view>
+    <!-- 分类栏 -->
+    <view class="nav1">
+        <swiper> 
+          <swiper-item>
+            <view class="nav1_items"><image src="/pages/fenleilan-images/京东超市.png"></image><text>\n京东超市</text></view>
+            <view class="nav1_items"><image src="/pages/fenleilan-images/数码电器.png"></image><text>\n数码电器</text></view>
+            <view class="nav1_items"><image src="/pages/fenleilan-images/京东服饰.png"></image><text>\n京东服饰</text></view>
+            <view class="nav1_items"><image src="/pages/fenleilan-images/京东生鲜.png"></image><text>\n京东生鲜</text></view>
+            <view class="nav1_items"><image src="/pages/fenleilan-images/京东到家.png"></image><text>\n京东到家</text></view>
+            <view class="nav1_items"><image src="/pages/fenleilan-images/充值缴费.png"></image><text>\n充值缴费</text></view>
+            <view class="nav1_items"><image src="/pages/fenleilan-images/9.9.png"></image><text>\n9.9元拼</text></view>
+            <view class="nav1_items"><image src="/pages/fenleilan-images/领卷.png"></image><text>\n领卷</text></view>
+            <view class="nav1_items"><image src="/pages/fenleilan-images/领金贴.png"></image><text>\n领金贴</text></view>
+            <view class="nav1_items"><image src="/pages/fenleilan-images/PLUS会员.png"></image><text>\nPLUS会员</text></view>
+          </swiper-item>
+        </swiper>
+    </view>
+    <!-- 分类栏 -->
+    <view class="nav2">
+      <view class="nav2_items"><text>\n\n正品直邮</text><image src="/pages/fenleilan-images/正品直邮.png"></image></view>
+      <view class="nav2_items"><text class="font">来电好货\n</text><text>3C大放价</text><image src="/pages/fenleilan-images/3C大放价.png"></image></view>
+      <view class="nav2_items"><text class="font">国潮风尚\n</text><text>国货正当时</text><image src="/pages/fenleilan-images/国货正当时.png"></image></view>
+      <view class="nav2_items"><text>\n\n都是你爱的</text><image src="/pages/fenleilan-images/都是你爱的.jpg"></image></view>
+    </view>
+    <!-- 秒杀 -->
+    <view class="box">
+      <text decode="{{true}}">京东秒杀&nbsp;</text>
+      <view class="txt-time">{{txtTime.hou}}</view><text>:</text>
+      <view class="txt-time">{{txtTime.min}}</view><text>:</text>
+      <view class="txt-time">{{txtTime.sec}}</view>
+      <text class="box1">更多秒杀</text>
+      <view class="arrow"></view>
+    </view>
+    <scroll-view scroll-x="true">
+      <view class="goods">
+        <view class="goods_item"><image src=""></image></view>
+        <view class="goods_item"><image src=""></image></view>
+        <view class="goods_item"><image src=""></image></view>
+        <view class="goods_item"><image src=""></image></view>
+        <view class="goods_item"><image src=""></image></view>
+        <view class="goods_item"><image src=""></image></view>
+        <view class="goods_item"><image src=""></image></view>
+      </view>
+    </scroll-view>
+	</view>
+</view>
