@@ -1,14 +1,16 @@
 /**index.wxss**/
-page{
+page {
     display: flex;
     flex-direction: column;
     height: 100%;
 }
-view{
+
+view {
     box-sizing: border-box;
 }
+
 /**搜索栏**/
-.ui-searchbar{
+.ui-searchbar {
     position: relative;
     padding: 8px 10px;
     display: -webkit-box;
@@ -19,21 +21,24 @@ view{
     border-top: 1rpx solid #ffffff;
     border-bottom: 1rpx solid #ffffff;
 }
-.ui-icon-search_inbox{
+
+.ui-icon-search_inbox {
     position: absolute;
     left: 10px;
     top: 7px;
 }
-.ui-searchbar_form{
+
+.ui-searchbar_form {
     position: relative;
     -webkit-box-flex: z;
-    -webkit-flex:auto;
-            flex:auto;
+    -webkit-flex: auto;
+    flex: auto;
     border-radius: 30px;
     background: #ffffff;
     border: 1rpx solid #E6E6EA;
 }
-.ui-searchbar_box{
+
+.ui-searchbar_box {
     position: relative;
     padding-left: 30px;
     padding-right: 30px;
@@ -41,12 +46,14 @@ view{
     box-sizing: border-box;
     z-index: 1;
 }
-.ui-searchbar_input{
+
+.ui-searchbar_input {
     height: 28px;
     line-height: 28px;
     font-size: 14px;
 }
-.ui-searchbar_cancelbtn{
+
+.ui-searchbar_cancelbtn {
     margin-left: 10px;
     line-height: 29px;
     color: #ffffff;
@@ -56,18 +63,21 @@ view{
     border-radius: 30px;
     padding: 0rpx 20rpx;
 }
+
 /**字体**/
-.font{
+.font {
     font-weight: 900;
     font-size: 17px;
     line-height: 34px;
 }
+
 /**页面**/
 .ui-tabcontent {
     padding-top: 2rpx;
     text-align: center;
     font-size: 32rpx;
 }
+
 /**导航栏**/
 .nav {
     position: relative;
@@ -86,28 +96,33 @@ view{
     left: auto;
     z-index: 1;
 }
+
 .nav-item {
     width: 20%;
     display: inline-block;
     text-align: center;
 }
+
 .nav-item.active {
     transition: all 0.3s;
     border-bottom: 10rpx solid #478ff3;
     color: #478ff3;
 }
+
 /**图片滚动播放**/
-.images{
+.images {
     height: 300rpx;
 }
-.images-container swiper{
+
+.images-container swiper {
     position: relative;
     width: 100%;
     height: 300rpx;
     margin-top: 0rpx;
 }
+
 /**分类栏**/
-.nav1{
+.nav1 {
     position: relative;
     width: 100%;
     top: 0px;
@@ -115,19 +130,22 @@ view{
     padding: 0px;
     box-sizing: border-box;
 }
-.nav1_items{
+
+.nav1_items {
     float: left;
     width: 20%;
     height: 70px;
     text-align: center;
 }
-.nav1_items image{
+
+.nav1_items image {
     width: 45px;
     height: 45px;
     margin-top: 15px;
 }
+
 /**分类栏**/
-.nav2{
+.nav2 {
     position: relative;
     width: 100%;
     height: 100px;
@@ -135,40 +153,46 @@ view{
     top: 160px;
     box-sizing: border-box;
 }
-.nav2_items{
+
+.nav2_items {
     float: left;
     width: 25%;
     height: 70px;
     text-align: center;
 }
-.nav2_items image{
+
+.nav2_items image {
     width: 80px;
     height: 80px;
 }
+
 /**秒杀**/
-.box{
+.box {
     position: relative;
     top: 200px;
     display: flex;
     width: 100%;
     padding: 15px;
 }
-.box1{
+
+.box1 {
     margin-left: 115px;
     color: #FF0000;
 }
-.arrow{
+
+.arrow {
     width: 8px;
     height: 8px;
-    border-top: 2px solid #FF0000;       
+    border-top: 2px solid #FF0000;
     border-right: 2px solid #FF0000;
-    position: absolute; 
-    right: 20rpx;  
-    transform: rotate(45deg); 
-    margin-top:10rpx; 
+    position: absolute;
+    right: 20rpx;
+    transform: rotate(45deg);
+    margin-top: 10rpx;
 }
+
 /**倒计时**/
-.txt-time{
+.txt-time {
     background-color: #FF0000;
     color: #FFF;
     border-radius: 15rpx;
@@ -179,17 +203,58 @@ view{
     line-height: 42rpx;
     text-align: center;
 }
+
 /**秒杀物品**/
-.goods{
+/* .goods {
     position: relative;
-    height: 160rpx; 
+    height: 160rpx;
     width: 100%;
     display: flex;
     display: -webkit-box;
-} 
-.goods_item{ 
+}
+
+.goods_item {
     width: 160rpx;
     height: 160rpx;
-    background-color:red;
+    background-color: red;
     margin-right: 10rpx;
-} 
+} */
+
+.bargains {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    line-height: normal;
+}
+
+.bargains .top {
+    display: inline-flex;
+}
+
+.bargains .countdown {
+    display: inline-flex;
+}
+
+.bargains .more-bargains {
+    margin-left: auto;
+    color: red;
+}
+
+.bargains .goods-list {
+    width: 100%;
+    height: 100px;
+    white-space: nowrap;
+}
+
+.bargains .goods_item {
+    width: 33%;
+    height: 100px;
+    display: inline-block;
+    background-color: red;
+}
+
+.bargains image {
+    width: 64px;
+    height: 64px;
+}
